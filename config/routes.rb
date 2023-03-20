@@ -1,8 +1,3 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  resources :spots do
-    collection do
-      get 'search'
-    end
-  end
+  get '/spots', to: 'spots#index'
 end
