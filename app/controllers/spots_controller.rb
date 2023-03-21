@@ -4,6 +4,7 @@ class SpotsController < ApplicationController
     def search
         # params[:q]のqには検索フォームに入力した値が入る
         @q = Spot.ransack(params[:q])
+        @q.combinator = 'or'
     end
 
     def index
