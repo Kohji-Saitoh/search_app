@@ -1,13 +1,13 @@
 <!--検索フォーム-->
 <%= search_form_for @q do |f| %>
-    <%= f.label :"スポット検索" %>
-    <%= f.search_field :name_cont, placeholder: "キーワードを入力してください" %>
-    <%= f.submit "検索" %>
+    <%= f.label :'スポット検索' %>
+    <%= f.search_field :name_cont, placeholder: 'キーワードを入力してください' %>
+    <%= f.submit '検索' %>
     <br>
 
-    <%= f.label :"テキストで検索" %>
-    <%= f.search_field :text_cont, placeholder: "キーワードを入力してください" %>
-    <%= f.submit "検索" %>
+    <%= f.label :'テキストで検索' %>
+    <%= f.search_field :text_cont, placeholder: 'キーワードを入力してください' %>
+    <%= f.submit '検索' %>
 <% end %>
  
     <!--検索結果-->
