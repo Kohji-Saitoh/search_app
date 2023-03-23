@@ -13,7 +13,9 @@
 ActiveRecord::Schema.define(version: 2023_03_16_065625) do
 
   create_table "spots", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
+    t.text "text", null: false
+    t.integer "region_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
