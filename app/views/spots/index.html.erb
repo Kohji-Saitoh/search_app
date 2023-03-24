@@ -21,6 +21,7 @@
     <% @spots.each do |spot| %>
         <%= spot.name %>
         <%= spot.text %>
+        <%= spot.region.name %>
         <br>
     <% end %>
 <% else %>
