@@ -12,4 +12,22 @@ class SpotsController < ApplicationController
         @spots = @q.result(distinct: true)
     end
     
+    def new
+        @spot = Spot.new
+    end
+      
+    def create
+        @spot = Spot.new(spots_params)
+        if @spot.save
+            flash[:notice] = 'スポット登録が完了しました'
+            redirect_to root_path
+        else
+            render('spots/new')
+        end
+    end
+
+    private
+    def spots_params
+      params.require(:spot).permit(:name, :text, :region_id)
+    end
 end
