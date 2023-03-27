@@ -1,3 +1,7 @@
 p {
   margin: 0px;
 }
+
+.form-spot,.form-txt,.form-region {
+  display: flex;
+}
